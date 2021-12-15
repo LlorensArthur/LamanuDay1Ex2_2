@@ -1,28 +1,11 @@
 ﻿int age;
-string gender;
-Console.WriteLine("Indiquez votre âge");
+Console.WriteLine("Veuillez indiquer votre âge.");
 age = int.Parse(Console.ReadLine());
-Console.WriteLine("Êtes-vous un homme ou une femme?");
-gender = Console.ReadLine();
-if (gender == "homme")
+if (age >= 18)
 {
-    if (age >= 18)
-    {
-        Console.WriteLine("Vous êtes un homme et vous êtes majeur.");
-    }
-    else
-    {
-        Console.WriteLine("Vous êtes un homme et vous êtes mineur.");
-    }
+    Console.WriteLine($"Vous avez {age} ans, vous êtes donc majeur.e.");
 }
-if (gender == "femme")
+else
 {
-    if (age >= 18)
-    {
-        Console.WriteLine("Vous êtes une femme et vous êtes majeure.");
-    }
-    else
-    {
-        Console.WriteLine("Vous êtes une femme et vous êtes mineure.");
-    }
+    Console.WriteLine($"Vous avez {age} ans, vous êtes donc mineur.e.");
 }
