@@ -1,6 +1,9 @@
 ﻿int age;
 Console.WriteLine("Veuillez indiquer votre âge.");
-age = int.Parse(Console.ReadLine());
+while (!int.TryParse(Console.ReadLine(), out age))
+{
+    Console.WriteLine("Veuillez entrer uniquement un nombre.");
+}
 if (age >= 18)
 {
     Console.WriteLine($"Vous avez {age} ans, vous êtes donc majeur.e.");
